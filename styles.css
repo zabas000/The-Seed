@@ -31,23 +31,10 @@ header {
     text-decoration: none;
 }
 
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    border: 2px solid #D9E2CA;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.seed-shape {
-    width: 12px;
-    height: 16px;
-    background-color: #D9E2CA;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
+.logo-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .logo-text {
