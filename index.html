@@ -9,8 +9,7 @@
 <body>
     <!-- Header -->
     <header>
-
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <img src="images/logo-seed.svg" alt="The Seed Logo" class="logo-img">
             <span class="logo-text">The Seed</span>
         </a>
@@ -41,7 +40,7 @@
             </p>
             
             <div class="hero-buttons">
-                <a href="#proyecto" class="btn-primary">
+                <a href="#contacto" class="btn-primary">
                     Empezar proyecto
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -214,8 +213,6 @@
         </div>
     </section>
 
-    
-
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="faq-container">
@@ -329,7 +326,7 @@
                     </div>
                 </div>
 
-                <!-- Pregunta 8s -->
+                <!-- Pregunta 8 -->
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>¿Cómo empiezo mi proyecto con ustedes?</span>
@@ -359,7 +356,7 @@
             <form class="contact-form" id="contactForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="nombre">Nombre </label>
+                        <label for="nombre">Nombre</label>
                         <input 
                             type="text" 
                             id="nombre"
@@ -371,7 +368,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email </label>
+                        <label for="email">Email</label>
                         <input 
                             type="email" 
                             id="email"
@@ -385,12 +382,12 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="telefono">Teléfono </label>
+                        <label for="telefono">Teléfono</label>
                         <input 
                             type="tel" 
                             id="telefono"
                             name="telefono"
-                            placeholder="+56 300 000 " 
+                            placeholder="+56 300 000 0000" 
                             class="form-input"
                             required
                         >
@@ -448,7 +445,7 @@
                     </svg>
                     <div>
                         <strong>Horario</strong>
-                        <span>Lun - Vie: 9am - 6pm </span>
+                        <span>Lun - Vie: 9am - 6pm</span>
                     </div>
                 </div>
             </div>
@@ -489,7 +486,10 @@
                     '80% reducción en tiempo de gestión',
                     '95% satisfacción de usuarios'
                 ],
-                technologies: ['React', 'Node.js', 'MongoDB', 'Stripe']
+                technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+                links: {
+                    website: 'https://7luz.com' // Cambia por la URL real
+                }
             },
             2: {
                 image: 'images/DULCETA.jpg',
@@ -504,106 +504,152 @@
                     '500+ clientes nuevos en 3 meses',
                     '4.9/5 calificación promedio'
                 ],
-                technologies: ['WordPress', 'WooCommerce', 'WhatsApp API', 'Google Maps']
-            },
-            3: {
-                image: 'images/cloudmex.jpg',
-                category: 'SAAS',
-                title: 'CloudMex',
-                description: 'Migración cloud para empresa de logística',
-                color: 'blue',
-                challenge: 'CloudMex requería modernizar su infraestructura tecnológica heredada y migrar a la nube para mejorar escalabilidad y reducir costos operativos.',
-                solution: 'Implementamos una migración completa a AWS con arquitectura de microservicios, automatización de procesos y monitoreo en tiempo real con alta disponibilidad.',
-                results: [
-                    '60% reducción en costos de infraestructura',
-                    '99.9% uptime garantizado',
-                    '10x mejora en velocidad de procesamiento'
-                ],
-                technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform']
+                technologies: ['WordPress', 'WooCommerce', 'WhatsApp API', 'Google Maps'],
+                links: {
+                    website: 'https://ladulcetta.com', // Cambia por la URL real
+                    instagram: 'https://instagram.com/ladulcetta', // Cambia por la URL real
+                    facebook: 'https://facebook.com/ladulcetta' // Cambia por la URL real
+                }
             }
         };
 
-        // Funcionalidad del modal
+        // Funcionalidad del modal MEJORADA - Previene scroll issues
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('projectModal');
             const modalContent = document.getElementById('modalContent');
             const closeModal = document.getElementById('closeModal');
             const projectButtons = document.querySelectorAll('.project-link');
 
-            // Abrir modal
+            // Función para abrir modal
+            function openModal(projectId) {
+                const project = projectsData[projectId];
+                if (!project) return;
+
+                // Generar links de redes sociales
+                let socialLinks = '';
+                if (project.links) {
+                    socialLinks = '<div class="modal-social-links-top">';
+                    
+                    if (project.links.website) {
+                        socialLinks += `
+                            <a href="${project.links.website}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Visitar sitio web">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </a>
+                        `;
+                    }
+                    
+                    if (project.links.instagram) {
+                        socialLinks += `
+                            <a href="${project.links.instagram}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                        `;
+                    }
+                    
+                    if (project.links.facebook) {
+                        socialLinks += `
+                            <a href="${project.links.facebook}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        `;
+                    }
+                    
+                    socialLinks += '</div>';
+                }
+
+                // Generar contenido del modal
+                const content = `
+                    <div class="modal-header project-${project.color}">
+                        <div class="modal-image-container">
+                            <img src="${project.image}" alt="${project.title}" class="modal-main-image">
+                        </div>
+                    </div>
+
+                    <div class="modal-info">
+                        ${socialLinks}
+                        <span class="modal-category">${project.category}</span>
+                        <h2 class="modal-title">${project.title}</h2>
+                        <p class="modal-subtitle">${project.description}</p>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h3>Desafío</h3>
+                            <p>${project.challenge}</p>
+                        </div>
+
+                        <div class="modal-section">
+                            <h3>Solución</h3>
+                            <p>${project.solution}</p>
+                        </div>
+
+                        <div class="modal-section">
+                            <h3>Resultados</h3>
+                            <ul class="modal-results">
+                                ${project.results.map(result => `<li>• ${result}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="modal-section">
+                            <h3>Tecnologías</h3>
+                            <div class="tech-tags">
+                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                modalContent.innerHTML = content;
+                
+                // Prevenir scroll del body
+                document.body.classList.add('modal-open');
+                
+                // Mostrar modal
+                modal.classList.add('active');
+            }
+
+            // Función para cerrar modal
+            function closeModalFunc() {
+                modal.classList.remove('active');
+                
+                // Restaurar scroll del body
+                document.body.classList.remove('modal-open');
+            }
+
+            // Abrir modal al hacer clic en proyecto
             projectButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     const card = this.closest('.project-card');
                     const projectId = card.getAttribute('data-project');
-                    const project = projectsData[projectId];
-
-                    // Generar contenido del modal
-                    const content = `
-                        <div class="modal-header project-${project.color}">
-                            <div class="modal-image-container">
-                                <img src="${project.image}" alt="${project.title}" class="modal-main-image">
-                            </div>
-                        </div>
-
-                        <div class="modal-info">
-                            <span class="modal-category">${project.category}</span>
-                            <h2 class="modal-title">${project.title}</h2>
-                            <p class="modal-subtitle">${project.description}</p>
-                        </div>
-
-                        <div class="modal-body">
-                            <div class="modal-section">
-                                <h3>Desafío</h3>
-                                <p>${project.challenge}</p>
-                            </div>
-
-                            <div class="modal-section">
-                                <h3>Solución</h3>
-                                <p>${project.solution}</p>
-                            </div>
-
-                            <div class="modal-section">
-                                <h3>Resultados</h3>
-                                <ul class="modal-results">
-                                    ${project.results.map(result => `<li>• ${result}</li>`).join('')}
-                                </ul>
-                            </div>
-
-                            <div class="modal-section">
-                                <h3>Tecnologías</h3>
-                                <div class="tech-tags">
-                                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-
-                    modalContent.innerHTML = content;
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
+                    openModal(projectId);
                 });
             });
 
-            // Cerrar modal
-            closeModal.addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
+            // Cerrar modal con botón X
+            closeModal.addEventListener('click', closeModalFunc);
 
             // Cerrar al hacer clic fuera del modal
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
+                    closeModalFunc();
                 }
             });
 
             // Cerrar con tecla ESC
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
+                    closeModalFunc();
                 }
             });
         });
