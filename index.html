@@ -65,16 +65,16 @@
             </p>
             
             <div class="projects-grid">
-                <!-- 7luz-SPA -->
+                <!-- 7luz -->
                 <div class="project-card project-teal" data-project="1">
                     <div class="project-image">
                         <img src="images/7LUZ.jpg" alt="7luz SPA">
                     </div>
                     <div class="project-content">
-                        <span class="project-category">ECOMMERCE</span>
+                        <span class="project-category">CONSTRUCCIÓN & ELECTRICIDAD</span>
                         <h3 class="project-title">7luz SPA</h3>
                         <p class="project-description">
-                            Plataforma de wellness y bienestar digital.
+                            Soluciones técnicas para proyectos residenciales y comerciales.
                         </p>
                         
                         <button class="project-link">
@@ -86,16 +86,37 @@
                     </div>
                 </div>
 
-                <!-- DataFlow -->
+                <!-- La Dulcetta -->
                 <div class="project-card project-green" data-project="2">
                     <div class="project-image">
                         <img src="images/DULCETA.jpg" alt="La Dulcetta">
                     </div>
                     <div class="project-content">
-                        <span class="project-category">MARKETPLACE</span>
+                        <span class="project-category">E-COMMERCE</span>
                         <h3 class="project-title">La Dulcetta</h3>
                         <p class="project-description">
-                            Tienda online de repostería artesanal con delivery.
+                            Tienda online de carteras exclusivas.
+                        </p>
+                        
+                        <button class="project-link">
+                            <span class="link-text">Ver caso</span>
+                            <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ingeniería Roch's -->
+                <div class="project-card project-blue" data-project="3">
+                    <div class="project-image">
+                        <img src="images/ROCHS.jpg" alt="Ingeniería Roch's">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">CLIMATIZACIÓN & SERVICIOS</span>
+                        <h3 class="project-title">Ingeniería Roch's</h3>
+                        <p class="project-description">
+                            Soluciones integrales en climatización y aire acondicionado.
                         </p>
                         
                         <button class="project-link">
@@ -475,40 +496,59 @@
         const projectsData = {
             1: {
                 image: 'images/7LUZ.jpg',
-                category: 'ECOMMERCE',
+                category: 'CONSTRUCCIÓN & ELECTRICIDAD',
                 title: '7luz SPA',
-                description: 'Plataforma de wellness y bienestar digital',
+                description: 'Soluciones técnicas para proyectos residenciales y comerciales',
                 color: 'teal',
-                challenge: '7luz SPA necesitaba una presencia digital que reflejara la calma y profesionalismo de sus servicios, con sistema de reservas integrado.',
-                solution: 'Desarrollamos una plataforma web con diseño minimalista, sistema de reservas en tiempo real y pasarela de pagos. Incluye gestión de clientes y panel administrativo.',
+                challenge: 'El principal desafío era profesionalizar su presencia digital y estructurar un sistema que permitiera captar clientes de forma más consistente.',
+                solution: 'Desde The Seed se trabajó en diseño y desarrollo de landing page, estructuración de presencia digital, y soporte tecnológico para captación de clientes.',
                 results: [
-                    '150% aumento en reservas online',
-                    '80% reducción en tiempo de gestión',
-                    '95% satisfacción de usuarios'
+                    'Creación de Landing Page exitosa en tiempo acotado',
+                    'Profesionalización de presencia digital',
+                    'Sistema de captación de clientes estructurado'
                 ],
-                technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+                technologies: ['HTML/CSS', 'JavaScript', 'Hosting y Dominios', 'Analítica Web'],
                 links: {
-                    website: 'https://7luz.com' // Cambia por la URL real
+                    website: 'https://7luzspa.cl' 
                 }
             },
             2: {
                 image: 'images/DULCETA.jpg',
-                category: 'MARKETPLACE',
+                category: 'E-COMMERCE',
                 title: 'La Dulcetta',
-                description: 'Tienda online de repostería artesanal con delivery',
+                description: 'Tienda online de carteras exclusivas',
                 color: 'green',
-                challenge: 'La Dulcetta buscaba expandir su negocio de repostería local hacia el e-commerce, manteniendo la experiencia personalizada que caracteriza su marca.',
-                solution: 'Creamos un marketplace completo con catálogo interactivo, personalización de productos, integración con WhatsApp y sistema de seguimiento de pedidos en tiempo real.',
+                challenge: 'La Dulcetta buscaba expandir su negocio de carteras hacia el comercio digital, necesitando una plataforma que mostrara sus productos de manera atractiva y facilitara la comunicación directa con sus clientes.',
+                solution: 'Creamos una tienda online con catálogo visual interactivo, integración directa con Instagram para engagement de clientes, y sistema de consultas vía WhatsApp para atención personalizada y cierre de ventas.',
                 results: [
-                    '200% incremento en ventas mensuales',
-                    '500+ clientes nuevos en 3 meses',
-                    '4.9/5 calificación promedio'
+                    'Catálogo digital completo de productos',
+                    'Integración exitosa con redes sociales',
+                    'Incremento en alcance y ventas online'
                 ],
-                technologies: ['WordPress', 'WooCommerce', 'WhatsApp API', 'Google Maps'],
+                technologies: ['E-commerce', 'Instagram Integration', 'WhatsApp Business', 'SEO'],
                 links: {
-                    website: 'https://ladulcetta.com', // Cambia por la URL real
-                    instagram: 'https://instagram.com/ladulcetta', // Cambia por la URL real
-                    facebook: 'https://facebook.com/ladulcetta' // Cambia por la URL real
+                    instagram: 'https://instagram.com/ladulcetta001' // Cambia por la URL real
+                }
+            },
+            3: {
+                image: 'images/ROCHS.jpg',
+                category: 'CLIMATIZACIÓN & SERVICIOS',
+                title: "Ingeniería Roch's",
+                description: 'Soluciones integrales en climatización y aire acondicionado',
+                color: 'blue',
+                challenge: "Ingeniería Roch's, con más de 20 años de experiencia, necesitaba una presencia digital robusta que comunicara su expertise en climatización, destacara sus servicios especializados y generara confianza en clientes residenciales, comerciales e industriales.",
+                solution: 'Desarrollamos un sitio web profesional con secciones detalladas de servicios (instalación, mantención, reparación y asesoría), integración con redes sociales para ampliar alcance, y sistema de cotización online. Incluye portfolio de proyectos y testimonios de clientes.',
+                results: [
+                    'Presencia omnicanal (web + redes sociales)',
+                    'Mayor profesionalización de la marca',
+                    'Aumento significativo en solicitudes de servicio'
+                ],
+                technologies: ['WordPress', 'Custom Design', 'Social Media Integration', 'Contact Forms'],
+                links: {
+                    website: 'https://www.ingenieria-rochs.cl/assets/fonts/inicio.html',
+                    facebook: 'https://www.facebook.com/people/Ingenier%C3%ADa-Rochs/61556726285688/',
+                    instagram: 'https://www.instagram.com/ingenieria.rochs',
+                    tiktok: 'https://www.tiktok.com/@ingenieria.rochs?lang=en'
                 }
             }
         };
@@ -542,6 +582,16 @@
                         `;
                     }
                     
+                    if (project.links.facebook) {
+                        socialLinks += `
+                            <a href="${project.links.facebook}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                        `;
+                    }
+                    
                     if (project.links.instagram) {
                         socialLinks += `
                             <a href="${project.links.instagram}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en Instagram">
@@ -554,11 +604,11 @@
                         `;
                     }
                     
-                    if (project.links.facebook) {
+                    if (project.links.tiktok) {
                         socialLinks += `
-                            <a href="${project.links.facebook}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en Facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            <a href="${project.links.tiktok}" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Seguir en TikTok">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
                                 </svg>
                             </a>
                         `;
