@@ -24,7 +24,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #2d4a3d;
+    border-bottom: 1px solid #000000;
 }
 
 .logo {
@@ -441,6 +441,7 @@ nav {
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+
 
 .project-card:hover .project-image img {
     transform: scale(1.05);
