@@ -14,7 +14,13 @@
             <span class="logo-text">The Seed</span>
         </a>
 
-        <nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -68,7 +74,7 @@
                 <!-- 7luz -->
                 <div class="project-card project-teal" data-project="1">
                     <div class="project-image">
-                        <img  src="images/7LUZ.jpg" alt="7luz SPA">
+                        <img src="images/7LUZ.jpg" alt="7luz SPA">
                     </div>
                     <div class="project-content">
                         <span class="project-category">CONSTRUCCIÓN & ELECTRICIDAD</span>
@@ -527,11 +533,11 @@
                 ],
                 technologies: ['E-commerce', 'Instagram Integration', 'WhatsApp Business', 'SEO'],
                 links: {
-                    instagram: 'https://instagram.com/ladulcetta001' // Cambia por la URL real
+                    instagram: 'https://www.instagram.com/ladulcetta001' 
                 }
             },
             3: {
-                image: 'images/ROCHS.jpg',
+                image: 'images/ROCHS.png',
                 category: 'CLIMATIZACIÓN & SERVICIOS',
                 title: "Ingeniería Roch's",
                 description: 'Soluciones integrales en climatización y aire acondicionado',
@@ -545,7 +551,7 @@
                 ],
                 technologies: ['WordPress', 'Custom Design', 'Social Media Integration', 'Contact Forms'],
                 links: {
-                    website: 'https://www.ingenieria-rochs.cl/assets/fonts/inicio.html',
+                    website: 'https://www.ingenieria-rochs.cl/assets/fonts/nosotros.html',
                     facebook: 'https://www.facebook.com/people/Ingenier%C3%ADa-Rochs/61556726285688/',
                     instagram: 'https://www.instagram.com/ingenieria.rochs',
                     tiktok: 'https://www.tiktok.com/@ingenieria.rochs?lang=en'
@@ -724,6 +730,35 @@
                     // Toggle el item actual
                     item.classList.toggle('active');
                 });
+            });
+
+            // Funcionalidad del menú hamburguesa
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            const navLinks = document.querySelectorAll('.nav-links a, .contact-btn');
+
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Cerrar menú al hacer clic en un link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', function(event) {
+                if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             });
         });
     </script>

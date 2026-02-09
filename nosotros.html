@@ -10,13 +10,17 @@
     <!-- Header -->
     <header>
         <a href="index.html" class="logo">
-            <div class="logo-icon">
-                <div class="seed-shape"></div>
-            </div>
+            <img src="images/logo-seed.svg" alt="The Seed Logo" class="logo-img">
             <span class="logo-text">The Seed</span>
         </a>
 
-        <nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html#servicios">Servicios</a></li>
                 <li><a href="nosotros.html" class="active">Nosotros</a></li>
@@ -26,132 +30,162 @@
         </nav>
     </header>
 
-    <!-- Hero Nosotros -->
+    <!-- About Hero -->
     <section class="about-hero">
         <div class="about-hero-container">
-            <span class="hero-badge">NOSOTROS</span>
+            <span class="hero-badge">QUIÉNES SOMOS</span>
             
             <h1 class="hero-title">
-                La <span class="highlight">semilla</span> detrás<br>
-                de tu éxito digital
+                The Seed<br>
+                <span class="highlight">Aceleradora de negocios digitales</span>
             </h1>
             
             <p class="hero-description">
-                Somos un equipo apasionado que transforma ideas en realidades digitales.<br>
-                Conoce nuestra historia, misión y valores.
+                Diseñamos, ejecutamos y escalamos sistemas de marketing, ventas y tecnología<br>
+                para negocios que quieren crecer con estructura.
             </p>
         </div>
     </section>
 
-    <!-- Mission & Story Cards -->
+    <!-- About Intro -->
+    <section class="about-intro">
+        <div class="about-intro-container">
+            <div class="intro-content">
+                <h2 class="section-title-center">
+                    Un proyecto <span class="highlight">operativo</span><br>
+                    antes que discursivo
+                </h2>
+                <p class="intro-text">
+                    The Seed nace como un proyecto operativo antes que discursivo.
+                    No vendemos ideas sueltas: construimos sistemas que funcionan en el mundo real, 
+                    medimos resultados y ajustamos hasta que el negocio es sostenible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Cards (History & What We Do) -->
     <section class="about-cards">
         <div class="about-cards-container">
-            
-            <!-- Mission Card -->
-            <div class="about-card">
-                <div class="about-image">
-                    <img src="images/mision.png" alt="Nuestra Misión">
-                </div>
-                
-                <div class="about-card-content">
-                    <h3 class="about-card-title">Misión</h3>
-                    <p class="about-card-text">
-                        Impulsar negocios mediante soluciones digitales innovadoras que 
-                        transformen ideas en éxitos tangibles. Creemos en el potencial de 
-                        cada emprendimiento y trabajamos para hacerlo realidad con tecnología 
-                        de vanguardia y estrategia personalizada.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Founding Story Card -->
+            <!-- Historia -->
             <div class="about-card">
                 <div class="about-image">
                     <img src="images/story.png" alt="Nuestra Historia">
                 </div>
-                
                 <div class="about-card-content">
-                    <h3 class="about-card-title">Nuestra Historia</h3>
+                    <h3 class="about-card-title">Nuestra historia</h3>
                     <p class="about-card-text">
-                    The Seed nace como un proyecto operativo antes que discursivo.
-                    No vendemos ideas sueltas: construimos sistemas que funcionan en el mundo real, 
-                    medimos resultados y ajustamos hasta que el negocio es sostenible.
+                        The Seed surge desde la experiencia directa creando y operando negocios propios 
+                        y de terceros (5 Años de Experiencia en Pymes, medianas y grandes empresas y 
+                        Start ups en el mercado Chileno).
+                    </p>
+                    <p class="about-card-text">
+                        El proyecto nace al detectar un patrón común: muchos negocios fracasan no por 
+                        falta de esfuerzo, sino por falta de estructura, foco y sistemas claros.
+                    </p>
+                    <p class="about-card-text">
+                        A partir de ahí, The Seed evoluciona como una aceleradora operativa, organizada 
+                        en equipos especializados (Raindrops), capaces de abordar marketing, ventas y 
+                        tecnología de forma integrada.
                     </p>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Valores -->
-    <section class="values-section">
-        <div class="values-container">
-            <span class="section-badge">NUESTROS VALORES</span>
-            
-            <h2 class="section-title-center">
-                Lo que nos <span class="highlight">mueve</span>
-            </h2>
-
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon-simple">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="value-name">Innovación</h3>
-                    <p class="value-desc">Buscamos constantemente nuevas formas de resolver problemas.</p>
+            <!-- Qué Hacemos -->
+            <div class="about-card">
+                <div class="about-image">
+                    <img src="images/mision.png" alt="Qué Hacemos">
                 </div>
-
-                <div class="value-item">
-                    <div class="value-icon-simple">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="value-name">Compromiso</h3>
-                    <p class="value-desc">Tu éxito es nuestro éxito. Nos involucramos 100%.</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-icon-simple">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h3 class="value-name">Colaboración</h3>
-                    <p class="value-desc">Trabajamos codo a codo contigo en cada etapa.</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-icon-simple">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12"/>
-                        </svg>
-                    </div>
-                    <h3 class="value-name">Transparencia</h3>
-                    <p class="value-desc">Comunicación clara y honesta. Sin sorpresas.</p>
+                <div class="about-card-content">
+                    <h3 class="about-card-title">Qué hacemos</h3>
+                    <p class="about-card-text">
+                        Ayudamos a negocios a ordenar, lanzar y escalar sus operaciones digitales mediante:
+                    </p>
+                    <ul class="about-list">
+                        <li>Estrategia de marketing y contenido</li>
+                        <li>Sistemas de venta y captación</li>
+                        <li>Desarrollo web y soluciones tecnológicas</li>
+                        <li>Automatización y análisis de performance</li>
+                    </ul>
+                    <p class="about-card-text">
+                        Cada proyecto se trabaja con foco en ejecución real, no en promesas abstractas.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
+    <!-- Our Approach -->
+    <section class="approach-section">
+        <div class="approach-container">
+            <span class="section-badge">NUESTRO ENFOQUE</span>
+            
+            <h2 class="section-title-center">
+                Cómo <span class="highlight">trabajamos</span>
+            </h2>
+            
+            <div class="approach-content">
+                <p class="approach-text">
+                    Operamos bajo un modelo modular y escalable. Cada cliente es integrado a un sistema 
+                    diseñado para crecer sin colapsar la operación.
+                </p>
+                <p class="approach-text">
+                    Medimos, iteramos y ajustamos en ciclos cortos, priorizando resultados sostenibles 
+                    por sobre el crecimiento artificial.
+                </p>
+            </div>
+
+            <div class="approach-features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Modelo Modular</h3>
+                    <p class="feature-desc">Sistema escalable sin colapsar la operación</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ciclos Cortos</h3>
+                    <p class="feature-desc">Medición, iteración y ajuste constante</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D9E2CA" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Resultados Reales</h3>
+                    <p class="feature-desc">Enfoque en sostenibilidad, no crecimiento artificial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta" id="contacto">
         <div class="cta-container">
             <h2 class="cta-title">
-                ¿Listo para <span class="highlight">crecer</span> con nosotros?
+                ¿Listo para <span class="highlight">estructurar</span> tu negocio?
             </h2>
             <p class="cta-description">
-                Únete a las empresas que ya están transformando su futuro digital.
+                Hablemos de cómo podemos ayudarte a crecer de forma sostenible
             </p>
+            
             <div class="cta-buttons-center">
                 <a href="index.html#contacto" class="btn-primary">
-                    Empezar proyecto
+                    Contactar
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -159,6 +193,39 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Funcionalidad del menú hamburguesa
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            const navLinks = document.querySelectorAll('.nav-links a, .contact-btn');
+
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Cerrar menú al hacer clic en un link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', function(event) {
+                if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
